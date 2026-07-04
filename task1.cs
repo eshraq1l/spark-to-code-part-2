@@ -163,4 +163,53 @@ namespace Task6
             }
         }
     }////////////////////////////////////////////////
+    /////////////task 7
+
+namespace Task7
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                bool running = true;
+
+                while (running)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("----- MENU -----");
+                    Console.WriteLine("1) Say Hello");
+                    Console.WriteLine("2) Show Greeting");
+                    Console.WriteLine("3) Exit");
+                    Console.Write("Choose an option: ");
+
+                    try
+                    {
+                        int choice = Convert.ToInt32(Console.ReadLine());
+
+                        switch (choice)
+                        {
+                            case 1:
+                                Console.WriteLine("Hii there!");
+                                break;
+                            case 2:
+                                Console.WriteLine("Good day to you, hope you're doing well!");
+                                break;
+                            case 3:
+                                Console.WriteLine("Goodbye!");
+                                running = false;
+                                break;
+                            default:
+                                Console.WriteLine("Please choose a valid option (1-3).");
+                                break;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("That's not a valid number, try again.");
+                    }
+                }
+            }
+        }
+    }
 }
+////////////////////////////////////////////////////
