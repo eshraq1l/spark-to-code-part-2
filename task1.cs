@@ -44,7 +44,7 @@ namespace Task2
 }
 ///////////////////////////////////////////////////////////////////////////
 ///task3 
-///using System;
+///
 
 namespace Task3
 {
@@ -63,3 +63,27 @@ namespace Task3
     }
 }
 /////////////////////////////////////////////////////////////////////
+///
+
+namespace Task4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string correctPassword = "Spark2026";
+
+            Console.Write("Enter password: ");
+            string attempt = Console.ReadLine()!;
+
+            while (attempt != correctPassword)
+            {
+                Console.WriteLine("Incorrect password, try again");
+                Console.Write("Enter password: ");
+                attempt = Console.ReadLine()!;
+            }
+
+            Console.WriteLine("Access Granted");
+        }
+    }
+}///////////////////////////////////////////////////////////
