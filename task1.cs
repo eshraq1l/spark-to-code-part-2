@@ -213,3 +213,28 @@ namespace Task7
     }
 }
 ////////////////////////////////////////////////////
+///task8
+///
+
+namespace Task8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter a positive number N: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            int sum = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    sum = sum + i;
+                }
+            }
+
+            Console.WriteLine("Sum of even numbers from 1 to " + n + " = " + sum);
+        }
+    }
+}///////////////////////////////////////////////////
