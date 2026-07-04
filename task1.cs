@@ -86,4 +86,40 @@ namespace Task4
             Console.WriteLine("Access Granted");
         }
     }
-}///////////////////////////////////////////////////////////
+}/////////////////////////////////////////////////////////
+//task4 
+
+
+namespace Task5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int secretNumber = 42;
+            int guess;
+            int attempts = 0;
+
+            do
+            {
+                Console.Write("Guess the number: ");
+                guess = Convert.ToInt32(Console.ReadLine()!);
+                attempts++;
+
+                if (guess > secretNumber)
+                {
+                    Console.WriteLine("Too high");
+                }
+                else if (guess < secretNumber)
+                {
+                    Console.WriteLine("Too low");
+                }
+                else
+                {
+                    Console.WriteLine("Correct! You got it in " + attempts + " attempts.");
+                }
+
+            } while (guess != secretNumber);
+        }
+    }
+}/////////////////////////////////////////////////
