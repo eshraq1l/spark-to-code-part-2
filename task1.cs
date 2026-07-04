@@ -123,3 +123,44 @@ namespace Task5
         }
     }
 }/////////////////////////////////////////////////
+////Task 6 
+
+
+namespace Task6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Console.Write("Enter first number: ");
+                double num1 = double.Parse(Console.ReadLine()!);
+
+                Console.Write("Enter second number: ");
+                double num2 = double.Parse(Console.ReadLine()!);
+
+                double result = num1 / num2;
+
+                // note: dividing doubles by 0 gives Infinity instead of throwing,
+                // so we check for that manually too
+                if (double.IsInfinity(result))
+                {
+                    Console.WriteLine("Cannot divide by zero.");
+                }
+                else
+                {
+                    Console.WriteLine("Result: " + result);
+                }
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Cannot divide by zero.");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Please enter valid numbers only.");
+            }
+        }
+    }////////////////////////////////////////////////
+}
