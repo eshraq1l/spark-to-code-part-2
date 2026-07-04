@@ -238,3 +238,50 @@ namespace Task8
         }
     }
 }///////////////////////////////////////////////////
+///////////////Task 9
+///
+
+namespace Task9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = 0;
+            bool validInput = false;
+
+            do
+            {
+                Console.Write("Enter a positive whole number: ");
+
+                try
+                {
+                    number = Convert.ToInt32(Console.ReadLine());
+
+                    if (number <= 0)
+                    {
+                        Console.WriteLine("Number must be positive, try again.");
+                    }
+                    else
+                    {
+                        validInput = true;
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("That is not a valid whole number, try again.");
+                }
+
+            } while (!validInput);
+
+            // now that we have a valid positive number, do the sum in its own loop
+            int sum = 0;
+            for (int i = 1; i <= number; i++)
+            {
+                sum = sum + i;
+            }
+
+            Console.WriteLine("Sum from 1 to " + number + " = " + sum);
+        }
+    }
+}///////////////////////////////////
